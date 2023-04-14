@@ -45,7 +45,15 @@ public class Main {
         }
         */
 
+        System.out.println("La classe rectangle");
         new Rectangle(3, 8).display();
+        System.out.println("La classe square");
+        new Square(5).display();
+        System.out.println("la surface du carré");
+        System.out.println( new Square(5).calculerSurface());
+        ;
+       
+
     }
     
 }
