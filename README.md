@@ -1,3 +1,3 @@
 # JavaPOO
 
-#author : Ibrahima MBODJI
+# author : Ibrahima MBODJI
