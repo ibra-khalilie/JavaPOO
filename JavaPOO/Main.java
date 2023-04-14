@@ -44,13 +44,16 @@ public class Main {
     
         }
         */
+        Rectangle rectangle = new Rectangle(3, 8);
 
         System.out.println("La classe rectangle");
-        new Rectangle(3, 8).display();
+        rectangle.display();
         System.out.println("La classe square");
-        new Square(5).display();
+        Rectangle square = new Square(5);
+        square.display();
         System.out.println("la surface du carré");
-        System.out.println( new Square(5).calculerSurface());
+      
+    
         ;
        
 
