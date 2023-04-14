@@ -58,6 +58,15 @@ public class ExerciceNote{
         }
     }
 
+     //calculer la somme des nombres jusqu'a 10 000 
+     public  void sommeNombre() {
+        int somme = 0;
+        for (int i = 1; i <= 10000; i++) {
+            somme += i;
+        }
+        System.out.println("La somme des nombres jusqu'à 10000 est : " + somme);
+    }
+
         
 
 }
