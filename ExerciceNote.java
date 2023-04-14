@@ -1,3 +1,7 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -132,5 +136,30 @@ public class ExerciceNote{
 
     }
         
+
+    
+    //methode qui calcule le nombre de mot dans un fichier
+
+    public static int nombreDeMotsDansUnFichier(String cheminfichier){
+        File file = new File(cheminfichier);
+        if(!file.exists()) {
+            System.out.println("le fichier n'existe pas");
+            return -1;
+        }
+        int nombreDeMot = 0;
+        try{
+            Scanner lecteur = new Scanner(file);
+            while (lecteur.hasNext()) {
+                nombreDeMot++;
+                lecteur.next();
+            }
+            lecteur.close();
+        }catch(FileNotFoundException e){
+            System.out.println("Erreur de lecture");
+            e.printStackTrace();
+        }
+        return nombreDeMot;
+
+    }
 
 }
