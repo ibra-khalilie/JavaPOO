@@ -92,6 +92,45 @@ public class ExerciceNote{
         System.out.println("Bravo!!");
         
     }
+
+
+    //Compter le nombre de mot dans une phrase
+
+    public void nombreDeMotsDansUnePhrase(){
+ 
+        Scanner in = new Scanner(System.in);
+        System.out.println("Veuiller rentrer écrire une phrase quelconque : ");
+        String phrase = in.nextLine();
+        System.out.println("Veuiller saisir le mot dont vous voulez connaitre son nombre : ");
+        String mot = in.nextLine();
+        String[] mots = phrase.split(" ");
+        new ExerciceNote().sauvegarderPhrase(phrase);
+        int nombreDeMot =0;
+        for (String word : mots) {
+          if(word.equalsIgnoreCase(mot)){
+            nombreDeMot++;
+          }
+    
+        }
+        System.out.println("Le nombre de mot dans la phrase est : "+nombreDeMot);
+    }
+
+      //Sauvegarder le la phrase dans un fichier
+
+      public void sauvegarderPhrase(String phrase){
+
+    
+        try {
+            FileWriter writer = new FileWriter("fichier.txt");
+            writer.write(phrase.toString());
+            writer.close();
+            System.out.println("Le texte a été sauvegardé dans le fichier.");
+        } catch (IOException e) {
+            System.out.println("Une erreur s'est produite lors de la sauvegarde du fichier.");
+            e.printStackTrace();
+        }
+
+    }
         
 
 }
