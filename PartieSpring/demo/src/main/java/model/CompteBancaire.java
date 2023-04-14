@@ -8,7 +8,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@Table(name = "compte_bancaire")
+@Table(name = "compte")
 public class CompteBancaire {
 
         @Id
