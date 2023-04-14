@@ -10,9 +10,39 @@ public class Rectangle {
         this.longeur = longeur;
     }
 
+
+
+    public void display() {
+        for (int i = 1; i <= this.getLargeur(); i++) {
+            for (int j = 1; j <= this.getLongeur(); j++) {
+                if (i == 1 || i == this.getLargeur() || j == 1 || j == this.getLongeur()) {
+                    System.out.print("#");
+                } else {
+                    System.out.print("#");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+
+
     public double getLargeur() {
         return largeur;
     }
+
+    public void setLargeur(double largeur) {
+        this.largeur = largeur;
+    }
+
+    public void setLongeur(double longeur) {
+        this.longeur = longeur;
+    }
+
+    public double getLongeur() {
+        return longeur;
+    }
+    
 
     @Override
     public int hashCode() {
@@ -42,17 +72,6 @@ public class Rectangle {
         return true;
     }
 
-    public void setLargeur(double largeur) {
-        this.largeur = largeur;
-    }
-
-    public void setLongeur(double longeur) {
-        this.longeur = longeur;
-    }
-
-    public double getLongeur() {
-        return longeur;
-    }
-    
+   
     
 }

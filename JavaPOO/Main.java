@@ -44,6 +44,8 @@ public class Main {
     
         }
         */
+
+        new Rectangle(3, 8).display();
     }
     
 }
