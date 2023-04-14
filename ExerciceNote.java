@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class ExerciceNote{
@@ -67,6 +68,30 @@ public class ExerciceNote{
         System.out.println("La somme des nombres jusqu'à 10000 est : " + somme);
     }
 
+
+    public void jeuxDuJusteNombre(int nombre){
+        int saisie = nombre;
+        Random random = new Random();
+        int aleatoire = random.nextInt(100);
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Jeux du nombre du juste nombre");
+        System.out.println("Entrer un nombre");
+        do{
+            if(saisie<aleatoire){
+                System.out.println("Le nombre entré est plus petit");
+                saisie = sc.nextInt();
+            
+            }else{
+
+                System.out.println("le nombre entré est plusGrand");
+                saisie = sc.nextInt();
+            }
+
+        }while(saisie!=aleatoire);
+
+        System.out.println("Bravo!!");
+        
+    }
         
 
 }
