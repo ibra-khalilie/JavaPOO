@@ -1,12 +1,18 @@
 package JavaPOO;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
+
+import javax.sound.sampled.SourceDataLine;
 
 public class Main {
 
    
 
         public static void main(String[] args) {
+
+            //Test des exercices pour la classe ExercieNote
             /* 
             ExerciceNote exe =  new ExerciceNote();
 
@@ -44,6 +50,8 @@ public class Main {
     
         }
         */
+
+        //création d'une instance rectangle
         Rectangle rectangle = new Rectangle(3, 8);
 
         System.out.println("La classe rectangle");
@@ -56,7 +64,57 @@ public class Main {
     
         ;
        
+        //Creation d'un utilisateur
+        Utilisateur utilisateur = new Utilisateur();
+        utilisateur.setUsername("Ibrahima");
+        utilisateur.setPassword("passe");
+        System.out.println("l'utilsateur est  :"+utilisateur.getUsername());
+
+
+        //Creation de voiture
+        Voiture voiture = new Voiture();
+        voiture.setKilometre(100000);
+        voiture.setMarque("AUDI");
+        voiture.setModel("RS8");
+
+        Voiture voiture2 = new Voiture();
+        voiture2.setKilometre(100000);
+        voiture2.setMarque("FORD");
+        voiture2.setModel("128");
+
+        List<Voiture> voitures = new ArrayList<>();
+        voitures.add(0, voiture);
+        voitures.add(voiture2);
+
+        utilisateur.listerVoiture(voitures);
+
+
+
+
+
+
+        // test de la classe Singleton
+        Singleton singleton1 = Singleton.getInstance();
+        Singleton singleton2 = Singleton.getInstance();
+
+        System.out.println("adresse singleton 1 "+singleton1+ "adresse singleton 1"+singleton2);
+        if(singleton1.equals(singleton2)){
+            System.out.println("Les instances sont identiques");
+        }
+
+
+
+
+
+
 
     }
+
+        
+
+        
+        
+
+
     
 }
