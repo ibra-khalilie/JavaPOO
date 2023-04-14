@@ -33,4 +33,31 @@ public class ExerciceNote{
    
       }
 
+    
+    //renverser une chaine de caractére
+
+    public String reverseString(String chaine){
+        
+        StringBuilder sb = new StringBuilder(chaine);
+        return sb.reverse().toString();
+    }
+
+      //Afficher une piramide à l'aide d'une chaine de caractère
+
+    public void afficherPyramide(){
+      
+        for (int i = 1; i <= 10; i++) {
+
+            for (int j = 1; j <= 10 - i; j++) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= 2 * i - 1; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+        
+
 }
