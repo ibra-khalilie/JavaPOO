@@ -5,6 +5,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import repository.BanqueRepository;
 
+import java.util.List;
+import java.util.Optional;
+
 @Service
 public class CompteService {
 
@@ -26,6 +29,29 @@ public class CompteService {
 
         compteRepository.save(compteDebit);
         compteRepository.save(compteCredit);
+    }
+
+
+    public List<CompteBancaire> comptes(){
+
+        return compteRepository.findAll();
+    }
+
+    public CompteBancaire creerCompte(CompteBancaire compte) {
+        return compteRepository.save(compte);
+    }
+
+    public Optional<CompteBancaire> getCompteById(Long id) {
+        return compteRepository.findById(id);
+    }
+
+    public CompteBancaire modifierCompte(CompteBancaire compte) {
+        return compteRepository.save(compte);
+    }
+
+    public boolean supprimerCompte(Long id) {
+        compteRepository.deleteById(id);
+        return false;
     }
 
 }
